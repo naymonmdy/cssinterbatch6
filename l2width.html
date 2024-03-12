@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Width</title>
+</head>
+<style type="text/css">
+    .div1 , .div2 ,.div3,.div4{
+       
+        background-color:steelblue ;
+        color:white;
+        padding:20px;
+    }
+
+    .div1{
+        height: 300px;
+        width: 800px;
+    }
+
+    .div2{
+        max-height: 300px;
+        max-width: 800px;
+    }
+
+    .div3{
+        min-height: 300px;
+        min-width: 800px;
+    }
+    .div4{
+        min-width: 700px;
+        max-width: 800px;
+        /* between */
+    }
+
+
+</style>
+<body>
+    <h1>Width VS Max-Width / Min-Width</h1>
+    <div class="div1">
+        <h1>Width</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium ullam necessitatibus exercitationem dolore, quo error iure accusamus temporibus in libero dignissimos sed suscipit voluptate, iste impedit inventore, neque magni? Tenetur?</p>
+    </div>
+    <hr>
+    <div class="div2">
+        <h1>Max-Width</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium ullam necessitatibus exercitationem dolore, quo error iure accusamus temporibus in libero dignissimos sed suscipit voluptate, iste impedit inventore, neque magni? Tenetur?</p>
+    </div>
+    <hr>
+    <div class="div3">
+        <h1>Min-Width</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium ullam necessitatibus exercitationem dolore, quo error iure accusamus temporibus in libero dignissimos sed suscipit voluptate, iste impedit inventore, neque magni? Tenetur?</p>
+    </div>
+    <hr>
+    <div class="div4">
+        <h1>Min-Width / Max-Width</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium ullam necessitatibus exercitationem dolore, quo error iure accusamus temporibus in libero dignissimos sed suscipit voluptate, iste impedit inventore, neque magni? Tenetur?</p>
+    </div>
+    <hr>
+    
+</body>
+</html>

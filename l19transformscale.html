@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition Scalee</title>
+  </head>
+  <style type="text/css">
+    .container{
+        width: 1200px;
+        background-color: gray;
+        /* rem (root element font size) */
+        margin: 3rem 0;
+    }
+    .container .square{
+        width: 150px;
+        height: 50px;
+        background-color: red;
+        color:white;
+
+
+        text-align: center;
+        line-height: 50px;
+        border-radius: 10%;
+
+        transition-property: transform;
+        transition-duration: 1s;
+        transition-timing-function: linear;
+    }
+    #scale:hover{
+        /* scale(x,y) */
+        /* transform scale default 1 */
+        transform: scale(2);
+    }
+    #scalexy:hover{
+        /* scale(x,y) */
+        transform: scale(3,2);
+        /* transform: scale(2,5); */
+    }
+    #scalex:hover{
+        transform: scaleX(2);
+    }
+    #scaley:hover{
+        transform: scaleY(5);
+    }
+   
+  
+  </style>
+  <body>
+    <div class="container">
+        <div id="scale" class="square">DIV1 X,Y</div>
+        <div id="scalexy" class="square">DIV 2 XY</div>
+        <div id="scalex" class="square">DIV 3 X</div>
+        <div id="scaley" class="square">DIV 4 Y</div>
+
+       
+    </div>
+
+  </body>
+</html>

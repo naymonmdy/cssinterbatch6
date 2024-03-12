@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clip Path</title>
+</head>
+<style type="text/css">
+    .square{
+        width: 100px;
+        height: 100px;
+        background-color: steelblue;
+    }
+    .circle{
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        border-radius: 50%;
+    }
+    .triangle{
+        width: 0px;
+        height: 0px;
+        /* background-color:black; */
+
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
+        border-bottom: 100px solid steelblue;
+
+        /* border-left: 100px solid transparent;
+        border-right: 100px solid steelblue;
+        border-bottom: 100px solid transparent;
+         */
+    }
+    .squareshape{
+        width: 100px;
+        height: 100px;
+        background-color: steelblue;
+        float: left;
+        margin-right: 20px;
+    }
+    .circleshape{
+        width: 100px;
+        height: 100px;
+        background-color: steelblue;
+        /* border-radius: 50%;
+        overflow: hidden; */
+
+        clip-path: circle();
+        float: left;
+        margin-right: 20px;
+        shape-outside: circle();
+
+    }
+    .ellipseshape{
+        width: 100px;
+        height: 100px;
+        background-color: steelblue;
+        /* ellipse (weight height) */
+        clip-path: ellipse(50% 70%);
+        shape-outside: ellipse(50% 70%);
+        margin-right: 20px;
+        float: left;
+
+    }
+    .polygonshape{
+        width: 100px;
+        height: 100px;
+        background-color: rgb(70, 180, 118);
+
+        clip-path: polygon(0 1%, 100% 1%, 100% 18%, 55% 19%, 57% 100%, 39% 100%, 37% 19%, 0 19%);
+        shape-outside: polygon(0 1%, 100% 1%, 100% 18%, 55% 19%, 57% 100%, 39% 100%, 37% 19%, 0 19%) ;
+        float: left;
+        margin-right: 20px;
+   
+    }
+
+
+
+</style>
+<body>
+    <div class="square">square</div>
+    <hr>
+    <div class="circle">Circle</div>
+    <hr>
+    <div class="triangle">Triangle</div>
+    <hr>
+    <div>
+        <div class="squareshape">Square
+        </div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eveniet quos cupiditate quo nam voluptatum adipisci alias at sunt repellendus sed molestiae, nulla pariatur eos quam maxime? Repellendus, eum suscipit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eveniet quos cupiditate quo nam voluptatum adipisci alias at sunt repellendus sed molestiae, nulla pariatur eos quam maxime? Repellendus, eum suscipit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eveniet quos cupiditate quo nam voluptatum adipisci alias at sunt repellendus sed molestiae, nulla pariatur eos quam maxime? Repellendus, eum suscipit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eveniet quos cupiditate quo nam voluptatum adipisci alias at sunt repellendus sed molestiae, nulla pariatur eos quam maxime? Repellendus, eum suscipit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eveniet quos cupiditate quo nam voluptatum adipisci alias at sunt repellendus sed molestiae, nulla pariatur eos quam maxime? Repellendus, eum suscipit.
+            </p>
+        
+    </div>
+    <hr>
+    <div>
+        <div class="circleshape">circleshape
+        </div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eveniet quos cupiditate quo nam voluptatum adipisci alias at sunt repellendus sed molestiae, nulla pariatur eos quam maxime? Repellendus, eum suscipit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eveniet quos cupiditate quo nam voluptatum adipisci alias at sunt repellendus sed molestiae, nulla pariatur eos quam maxime? Repellendus, eum suscipit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eveniet quos cupiditate quo nam voluptatum adipisci alias at sunt repellendus sed molestiae, nulla pariatur eos quam maxime? Repellendus, eum suscipit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eveniet quos cupiditate quo nam voluptatum adipisci alias at sunt repellendus sed molestiae, nulla pariatur eos quam maxime? Repellendus, eum suscipit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eveniet quos cupiditate quo nam voluptatum adipisci alias at sunt repellendus sed molestiae, nulla pariatur eos quam maxime? Repellendus, eum suscipit.
+            </p>
+        
+    </div>
+    <hr>
+    <div>
+        <div class="ellipseshape">Ellipseshape
+        </div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eveniet quos cupiditate quo nam voluptatum adipisci alias at sunt repellendus sed molestiae, nulla pariatur eos quam maxime? Repellendus, eum suscipit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eveniet quos cupiditate quo nam voluptatum adipisci alias at sunt repellendus sed molestiae, nulla pariatur eos quam maxime? Repellendus, eum suscipit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eveniet quos cupiditate quo nam voluptatum adipisci alias at sunt repellendus sed molestiae, nulla pariatur eos quam maxime? Repellendus, eum suscipit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eveniet quos cupiditate quo nam voluptatum adipisci alias at sunt repellendus sed molestiae, nulla pariatur eos quam maxime? Repellendus, eum suscipit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eveniet quos cupiditate quo nam voluptatum adipisci alias at sunt repellendus sed molestiae, nulla pariatur eos quam maxime? Repellendus, eum suscipit.
+            </p>
+        
+    </div>
+    <hr>
+    <div>
+        <div class="polygonshape">polygonshape
+        </div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eveniet quos cupiditate quo nam voluptatum adipisci alias at sunt repellendus sed molestiae, nulla pariatur eos quam maxime? Repellendus, eum suscipit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eveniet quos cupiditate quo nam voluptatum adipisci alias at sunt repellendus sed molestiae, nulla pariatur eos quam maxime? Repellendus, eum suscipit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eveniet quos cupiditate quo nam voluptatum adipisci alias at sunt repellendus sed molestiae, nulla pariatur eos quam maxime? Repellendus, eum suscipit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eveniet quos cupiditate quo nam voluptatum adipisci alias at sunt repellendus sed molestiae, nulla pariatur eos quam maxime? Repellendus, eum suscipit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eveniet quos cupiditate quo nam voluptatum adipisci alias at sunt repellendus sed molestiae, nulla pariatur eos quam maxime? Repellendus, eum suscipit.
+            </p>
+        
+    </div>
+
+    
+    
+</body>
+</html>

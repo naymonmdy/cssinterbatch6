@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+</head>
+<style type="text/css">
+    body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .container
+    {   
+        background-color: gray;
+        width: 1200px;
+        display: grid;
+        
+
+        grid-template-columns: repeat(2,300px);
+        /* grid-template-columns: repeat(auto-fill,300px); */
+        /* grid-template-columns: repeat(2,1fr 300px); */
+        grid-template-columns: repeat(3,100px 1fr 200px);
+
+       
+       
+
+
+    }
+    .container > *{
+        /* width: 200px; */
+        height: 200px;
+        
+    }
+    .container div:nth-of-type(odd){
+        background-color: steelblue;
+    }
+    .container div:nth-of-type(even){
+        background-color:skyblue;
+    }
+
+</style>
+<body>
+
+    <div class="container">
+        <div class="div">This is DIV 1</div>
+        <div class="div">This is DIV 2</div>
+        <div class="div">This is DIV 3</div>
+        <div class="div">This is DIV 4</div>
+        <div class="div">This is DIV 5</div>
+        <div class="div">This is DIV 6</div>
+        <div class="div">This is DIV 7</div>
+        <div class="div">This is DIV 8</div>
+        <div class="div">This is DIV 9</div>
+        <div class="div">This is DIV 10</div>
+        <div class="div">This is DIV 11</div>
+        <div class="div">This is DIV 12</div>
+        <div class="div">This is DIV 13</div>
+        <div class="div">This is DIV 14</div>
+        <div class="div">This is DIV 15</div>
+        <div class="div">This is DIV 16</div>
+        <div class="div">This is DIV 17</div>
+        <div class="div">This is DIV 18</div>
+        <div class="div">This is DIV 19</div>
+        <div class="div">This is DIV 20</div>
+
+
+        
+
+    </div>
+
+</body>
+</html>
