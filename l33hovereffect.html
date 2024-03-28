@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect</title>
+    <style type="text/css">
+
+        body{
+        
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;    
+            align-items: center;
+        }
+        button{
+            background: none;
+            font-size: 40px;
+            border: 4px solid black;
+            color:transparent;
+            padding: 40px 80px;
+            position: relative;
+            overflow: hidden;
+
+        }
+        button::before{
+            content: "Hover Me";
+
+            width: 100%;
+            height: 100%;
+            background-color: steelblue;
+            color: white;
+
+            position:absolute;
+            left: 0;
+            top: 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transition: all 0.5s ;
+
+        } 
+        button::after{
+            content: "Press";
+
+            width: 100%;
+            height: 100%;
+            background-color:yellow;
+            color:black;
+
+            position:absolute;
+            left: 0;
+            top: 0;
+
+            display: flex;
+            justify-content: end;
+            align-items: center;
+
+            /* transform: translateY(100%); */
+            transition: all 0.5s;
+            z-index: -1;
+
+
+        } 
+        button:hover::before{
+            content: "Me";
+            justify-content: start;
+            padding-left: 5px;
+            transform: translate(50%);
+        }
+        button:hover::after{
+            transform: translate(-50%);
+            padding-right: 5px;
+        }
+       button:active::after{
+        content: "Thanks";
+       }
+       button:active::before{
+        content: "You";
+       }
+    </style>
+</head>
+<body>
+  
+        <button type="button">Hover Me</button>
+  
+</body>
+</html> 
