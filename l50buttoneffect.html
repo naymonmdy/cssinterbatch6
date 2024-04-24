@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button Effect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style type="text/css">
+      body {
+        font-family: sans-serif;
+        height: 100vh;
+        background-color: rgb(82, 76, 76);
+
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+ 
+      .btn{
+        width: 220px;
+        height: 80px;
+       background-color: darkred;
+       
+        text-transform: uppercase;
+        color:white;
+        font-size: 26px;
+        border-radius: 50px;
+        border:none;
+        
+        cursor: pointer;
+        position: relative;
+      }
+      
+    
+      .btn::before, .btn::after{
+    
+        content: "";
+
+        width: 100%;
+        height: 100%;
+        background-color: mediumvioletred;
+        border-radius: inherit;
+
+        position: absolute;
+        left:0;
+        top: 0;
+
+        z-index: -1;
+        transition: all .5s ease-out;
+      }
+   
+      .btn:hover::before{
+        left:-25px;
+        top:10px;
+        opacity: 0;
+
+        transform: scale(1.2);
+      }
+   
+      .btn:hover::after{
+        left:25px;
+        top:10px;
+        opacity: 0;
+        transform: scale(1.2);
+        transition-delay: .3s;
+      }
+      .btn:hover{
+        box-shadow:-10px 10px 5px rgba(0, 0, 0, 0.7) ;
+        transition-delay: .8s;
+      }
+     
+     
+    </style>
+  </head>
+  <body>
+    <button type="button" class="btn">Hover Me</button>
+  </body>
+</html>

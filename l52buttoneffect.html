@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button Effect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style type="text/css">
+      body {
+        font-family: sans-serif;
+        height: 100vh;
+
+
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+ 
+      .btn{
+       
+        background:linear-gradient(
+          200deg,
+          skyblue,pink
+        );
+        border: none;
+        font-size: 40px;
+        border-radius: 40px;
+        padding:20px;
+        
+        cursor: pointer;
+        position: relative;
+      }
+      
+    
+      .btn::after{
+        content: "10% OFF";
+        background-color: orange;
+        font-size: 16px;
+        border-radius: inherit;
+        padding: 5px;
+
+        position: absolute;
+        top: -10px;
+        right:10px;
+        transition:all .5s;
+      }
+      
+      .btn:hover::after{
+        background-color: red;
+
+        color: white;
+      }
+      .btn:hover{
+        box-shadow:-10px 10px 5px rgba(0, 0, 0, 0.7) ;
+
+      }
+     
+     
+    </style>
+  </head>
+  <body>
+    <button type="button" class="btn">Add to Card</button>
+  </body>
+</html>
