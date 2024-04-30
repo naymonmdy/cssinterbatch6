@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinner</title>
+</head>
+    <style type="text/css">
+        body{
+
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            padding: 0;
+            margin: 0;
+        }
+        .spinner{
+
+            width: 30px;
+            height: 30px;
+            animation-name: myspinner;
+          
+            /* animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear; */
+
+            /* short hand */
+            animation: myspinner 2s infinite linear;
+        }
+
+        @keyframes myspinner {
+         from{
+                transform: rotate(0turn);
+         }
+        to{
+            transform: rotate(1turn);
+        }
+        }
+       
+
+    </style>
+<body>
+   <img src="../cssinterbatch6/img/loader.svg" alt="spinner" class="spinner" srcset="">
+
+    
+</body>
+</html>
